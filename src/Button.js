@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import { twMerge } from 'tailwind-merge';
 
 const Button = ({
 	children,
@@ -28,8 +29,10 @@ const Button = ({
 		}
 	);
 
+	const mergedClasses = twMerge(`${classes}`);
+
 	return (
-		<button className={classes}>
+		<button className={mergedClasses}>
 			{children}
 		</button>
 	);
