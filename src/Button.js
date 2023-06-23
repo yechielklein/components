@@ -9,9 +9,11 @@ const Button = ({
 	warning,
 	danger,
 	outline,
-	rounded
+	rounded,
+	...rest
 }) => {
 	const classes = classnames(
+		rest.className,
 		'flex items-center px-3 py-1.5 border',
 		{
 			'bg-blue-500 text-white border-blue-500': primary,
@@ -32,7 +34,7 @@ const Button = ({
 	const mergedClasses = twMerge(`${classes}`);
 
 	return (
-		<button className={mergedClasses}>
+		<button className={mergedClasses} {...rest}>
 			{children}
 		</button>
 	);

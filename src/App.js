@@ -7,41 +7,41 @@ const App = () => {
 		<div>
 			<br />
 			<div>
-				<Button>
+				<Button onClick={() => {console.log('Plain!')}}>
 					<FaGrin />
 					plain
 				</Button>
 			</div>
 			<br />
 			<div>
-				<Button primary rounded>
+				<Button onClick={() => {console.log('Primary!')}} primary rounded>
 					<FaGrinAlt />
 					primary
 				</Button>
 			</div>
 			<br />
 			<div>
-				<Button secondary outline>
+				<Button onClick={() => {console.log('Secondary!')}} secondary outline>
 					<FaGrinBeam />
 					secondary
 				</Button>
 			</div>
 			<br />
 			<div>
-				<Button success rounded outline>
+				<Button onClick={() => {console.log('Success!')}} success rounded outline>
 					<FaGrinHearts />
 					success
 				</Button>
 			</div>
 			<br />
 			<div>
-				<Button warning>
+				<Button onClick={() => {console.log('Warning!')}} warning>
 					warning
 				</Button>
 			</div>
 			<br />
 			<div>
-				<Button danger outline>
+				<Button onClick={() => {console.log('Danger!')}} danger outline>
 					danger
 				</Button>
 			</div>
