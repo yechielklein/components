@@ -3,20 +3,29 @@ import Button from './Button';
 const App = () => {
 	return (
 		<div>
+			<br />
 			<div>
-				<Button primary>primary</Button>
+				<Button>plain</Button>
 			</div>
+			<br />
 			<div>
-				<Button secondary>secondary</Button>
+				<Button primary rounded>primary</Button>
 			</div>
+			<br />
 			<div>
-				<Button success>success</Button>
+				<Button secondary outline>secondary</Button>
 			</div>
+			<br />
+			<div>
+				<Button success rounded outline>success</Button>
+			</div>
+			<br />
 			<div>
 				<Button warning>warning</Button>
 			</div>
+			<br />
 			<div>
-				<Button danger>danger</Button>
+				<Button danger outline>danger</Button>
 			</div>
 		</div>
 	);
