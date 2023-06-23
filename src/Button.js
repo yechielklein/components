@@ -1,3 +1,5 @@
+import classnames from 'classnames';
+
 const Button = ({
 	children,
 	primary,
@@ -8,21 +10,32 @@ const Button = ({
 	outline,
 	rounded
 }) => {
+	const classes = classnames(
+		'px-3 py-1.5 border',
+		{
+			'bg-blue-500 text-white border-blue-500': primary,
+			'bg-gray-900 text-white border-gray-900': secondary,
+			'bg-green-500 text-white border-green-500': success,
+			'bg-yellow-400 text-white border-yellow-400': warning,
+			'bg-red-500 text-white border-red-500': danger,
+			'bg-white': outline,
+			'rounded-full': rounded,
+			'text-blue-500': outline && primary,
+			'text-gray-900': outline && secondary,
+			'text-green-500': outline && success,
+			'text-yellow-400': outline && warning,
+			'text-red-500': outline && danger
+		}
+	);
+
 	return (
-		<button className="
-			bg-blue-500
-			text-white
-			px-3
-			py-1.5
-			border
-			border-blue-600
-		">
+		<button className={classes}>
 			{children}
 		</button>
 	);
 };
 
-Button.propTypes = {
+Button.propTypes = {	
 	checkButtonVariation: ({
 		primary,
 		secondary,
