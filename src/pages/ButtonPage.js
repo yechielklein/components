@@ -1,8 +1,8 @@
 import { FaGrin, FaGrinAlt, FaGrinBeam, FaGrinHearts } from 'react-icons/fa';
 
-import Button from './Button';
+import Button from '../components/Button';
 
-const App = () => {
+const ButtonPage = () => {
 	return (
 		<div>
 			<br />
@@ -49,4 +49,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default ButtonPage;
